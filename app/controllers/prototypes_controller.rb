@@ -22,6 +22,12 @@ class PrototypesController < ApplicationController
   def show
   end
 
+  def search
+    @prototypes = Prototype.search(params[:q])
+    @prototypes = @prototypes.page(params[:page])
+    render "index"
+  end
+
   private
 
   def set_prototype
