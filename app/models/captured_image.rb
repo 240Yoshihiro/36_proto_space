@@ -1,5 +1,6 @@
 class CapturedImage < ActiveRecord::Base
   belongs_to :Prototype
+  belongs_to :user
 
   mount_uploader :content, PrototypeImageUploader
 
