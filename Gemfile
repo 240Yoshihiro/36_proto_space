@@ -20,7 +20,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
-gem 'pg','~> 0.19.0', group: :production
+gem 'pg', :group => :production
 
 group :development, :test do
   gem 'byebug'
