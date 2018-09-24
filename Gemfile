@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
-gem 'mysql2', '~> 0.3.18'
+# gem 'mysql2', '~> 0.3.18',group: [:development, :test]
+gem 'sqlite3',group: :development
+
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -17,6 +20,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
+gem 'pg','~> 0.19.0', group: :production
 
 group :development, :test do
   gem 'byebug'
@@ -26,3 +30,4 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
