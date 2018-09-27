@@ -41,3 +41,7 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+protospace-in-dev_test
+
+protospace-in-dev_development
