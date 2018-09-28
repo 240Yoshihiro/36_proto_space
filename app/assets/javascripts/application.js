@@ -18,6 +18,11 @@
 //     });
 // });
 
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require bootstrap
+
 $(function() {
   $('input[type=file]').after('<span></span>');
 
