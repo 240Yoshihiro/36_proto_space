@@ -27,7 +27,7 @@ class PrototypesController < ApplicationController
     if prototype.user_id == current_user.id
       prototype.destroy
     end
-    redirect_to action: :index
+    redirect_to ({ action: :index }), notice: '投稿を削除しました。'
   end
 
   def search
