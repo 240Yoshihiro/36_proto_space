@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :set_prototype, only: :show
+  before_action :set_prototype, only: [:show, :edit]
 
   def index
     @prototypes = Prototype.order("created_at DESC").page(params[:page]).per(8)
@@ -17,6 +17,9 @@ class PrototypesController < ApplicationController
     else
       redirect_to ({ action: :new }), alert: 'YNew prototype was unsuccessfully created'
      end
+  end
+
+  def edit
   end
 
   def show
