@@ -37,3 +37,10 @@
           %a{href: "#", class: "btn btn-default"} iPad
         %li
           %a{href: "#", class: "btn btn-default"} wireframe
+    .col-md-3
+      #comments_area
+        = render partial: 'comments/index', locals: { comments: @comments }
+      - if user_signed_in?
+        / コメント入力欄をブログの詳細ページに表示するためのrender
+        = render partial: 'comment/form', locals: { comment: @comment, prototype: @prototype }
+

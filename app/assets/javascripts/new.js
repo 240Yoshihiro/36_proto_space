@@ -4,7 +4,7 @@ $(function(){
     var file = e.target.files[0],
         reader = new FileReader(),
         preview = $("#main_image_uploader").children("img");
-        t = this;
+        // t = this;
     // 画像ファイル以外の場合は何もしない
     if(file.type.indexOf("image") < 0){
       return false;

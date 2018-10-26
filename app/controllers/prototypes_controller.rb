@@ -23,6 +23,9 @@ class PrototypesController < ApplicationController
   end
 
   def show
+     @prototype = Prototype.find(params[:id])
+    @comment = Comment.new #①
+    @comments = @prototype.comments #②
   end
 
   def destroy
@@ -37,6 +40,9 @@ class PrototypesController < ApplicationController
     @prototypes = Prototype.search(params[:q])
     @prototypes = @prototypes.page(params[:page])
     render "index"
+  end
+
+  def eidt
   end
 
   private
